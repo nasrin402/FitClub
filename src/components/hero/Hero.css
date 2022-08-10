@@ -1,6 +1,6 @@
 .hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .left-h {
   padding: 2rem;

@@ -1,0 +1,9 @@
+.plans_heading {
+  display: flex;
+  justify-content: space-around;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-style: italic;
+}
