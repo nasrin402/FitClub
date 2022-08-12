@@ -18,16 +18,7 @@
   left: 2rem;
 }
 
-.plans_heading {
-  display: flex;
-  justify-content: space-around;
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  font-style: italic;
-  padding-bottom: 2rem;
-}
+
 
 .plans{
   display: flex;
@@ -86,4 +77,21 @@
 }
 .plan>:nth-child(5) {
   font-size: .8rem;
+}
+@media screen and (max-width: 768px) {
+  .plans_container{
+    margin-top: 2rem;
+  }
+  .plans{
+    flex-direction: column;
+  
+  }
+  .plan{
+    width: 15rem;
+    justify-content: center;
+    gap:1rem
+  }
+  .plans>:nth-child(2){
+    transform: none;
+  }
 }

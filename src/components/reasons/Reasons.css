@@ -75,3 +75,38 @@
 .partner>img{
     width: 2.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    .Reasons{
+        flex-direction: column;
+    }
+    .right-r{
+        margin-top: -4rem;
+    }
+    .right-r>div{
+        font-size: x-large;
+    }
+    .details-r>div{
+        font-size: small;
+    }
+    .details-r>div>img{
+        width: 1rem;
+        height: 1rem;
+    }
+    .left-r{
+        grid-auto-rows: auto;
+        overflow: hidden;
+    }
+    .left-r>:nth-child(1){
+       width: 7rem;
+       height: 17rem; 
+    }
+    .left-r>:nth-child(2){
+       width: 15rem;
+       height: 10rem; 
+    }
+    .left-r>:nth-child(3){
+       width: 8rem; 
+    }
+  
+}

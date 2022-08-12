@@ -4,10 +4,10 @@ import {plansData} from '../../data/plansData';
 import whiteTick from '../../assets/whiteTick.png';
 const Plans = () => {
     return (
-        <div className='plans_container'>
+        <div className='plans_container' id="plans">
         <div className='blur plans-blur-l'> </div>
         <div className='blur plans-blur-r'> </div>
-           <div className='plans_heading'>
+           <div className='programs-header'>
              <span className='stroke-text'>Ready to Start </span>
              <span>Your Journey </span>
              <span className='stroke-text'>now withus </span>
