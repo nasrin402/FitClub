@@ -1,9 +1,23 @@
 .plans_container{
   margin-top: -4rem;
-  padding: 0 2rem;
+  padding: 0 8rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+.plans-blur-r{
+  width: 32rem;
+  height: 22rem;
+  top: 4rem;
+  right: 8rem;
+}
+.plans-blur-l{
+  width: 32rem;
+  height: 22rem;
+  top: 7rem;
+  left: 2rem;
+}
+
 .plans_heading {
   display: flex;
   justify-content: space-around;
@@ -12,6 +26,7 @@
   text-transform: uppercase;
   color: white;
   font-style: italic;
+  padding-bottom: 2rem;
 }
 
 .plans{
@@ -38,7 +53,7 @@
   flex-direction: column;
   gap: 2rem;
   padding: 1.5rem;
-  width: 15rem;
+  width: 20rem;
 }
 
 .plan>svg {
