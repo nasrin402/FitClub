@@ -1,0 +1,62 @@
+.contact{
+    margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 3rem;
+}
+.register_form{
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+
+}
+.form_inner{
+    display: flex;
+    gap: 3rem;
+}
+.left-c{
+    flex: 1 1;
+}
+.right-c{
+    flex: 1 1;
+}
+.left-c>div, .right-c>div{
+    background-color: gray;
+   margin-bottom: 1rem;
+   padding: 1rem;
+}
+.left-c>div>input, .left-c>div>select, .right-c>div>input, .react-datepicker__input-container>input{
+    color:var(--lightgrayz);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: .4rem;
+    font-size: large;
+}
+.left-c > div > select> option{
+    cursor: pointer;
+}
+::placeholder{
+    color:var(--lightgrayz);
+}
+.contact>:nth-child(1){
+    margin-bottom: 2rem;
+}
+.contact>:nth-child(1)>span:nth-of-type(1){
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+.contact>:nth-child(1)>span:nth-of-type(2){
+    font-size: 3rem;
+    font-weight: bold;
+}
+.btn-c{
+    background-color: var(--orange);
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: larger;
+    color: white;
+    
+}
