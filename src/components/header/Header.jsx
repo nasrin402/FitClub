@@ -35,6 +35,10 @@ const Header = () => {
       span={true}
       smooth={true}
       >Testimonials</Link></li>
+      <li ><Link onClick={() =>setMenuOpened(false)} to='contact'
+      span={true}
+      smooth={true}
+      >Register</Link></li>
     </ul>}
       
    
