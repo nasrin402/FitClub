@@ -5,9 +5,36 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
-
+import Icon from "react-icons-kit";
+import { eye } from "react-icons-kit/ionicons/eye";
+import { eyeDisabled } from "react-icons-kit/ionicons/eyeDisabled";
 import * as yup from "yup";
 const Contact = () => {
+  //toggle password
+  const [type, setType] = useState("password");
+  const [iconType, setIconType] = useState(eyeDisabled);
+  const [type2, setType2] = useState("password");
+  const [iconType2, setIconType2] = useState(eyeDisabled);
+  const handleShow = () => {
+    if (type === "password") {
+      setType("text");
+      setIconType(eye);
+    } else {
+      setType("password");
+      setIconType(eyeDisabled);
+    }
+  };
+  const handleShow2 = () => {
+    if (type2 === "password") {
+      setType2("text");
+      setIconType2(eye);
+    } else {
+      setType2("password");
+      setIconType2(eyeDisabled);
+    }
+  };
+
+  //yup validation
   const re =
     /^((ftp|http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/;
   const pass =
@@ -38,6 +65,8 @@ const Contact = () => {
     ReactDatepicker: new Date(),
     user_gender: "Male",
   };
+
+  //react hook form
   const {
     register,
     handleSubmit,
@@ -47,6 +76,7 @@ const Contact = () => {
     reset,
   } = useForm({ defaultValues, resolver: yupResolver(schema) });
 
+  //email js function
   // const sendEmail = (data) => {
   //   console.log(data);
   //   emailjs
@@ -66,6 +96,7 @@ const Contact = () => {
   //     );
   //   reset();
   // };
+
   const confirm = "<h2>Your Data submitted successfully</h2>"
   const onSubmit = data => {
     alert(confirm); reset()}
@@ -135,7 +166,7 @@ const Contact = () => {
                 value="Male"
                 {...register("user_gender")}
               />
-                <label for="gender">Male</label>
+               <label for="gender">Male</label>
                {" "}
               <input
                 type="radio"
@@ -176,22 +207,25 @@ const Contact = () => {
             </div>
             <div>
               <input
-                type="password"
+              type={type}
                 name="user_password"
                 placeholder="Password"
                 {...register("user_password")}
+
               />
+              <Icon icon={iconType} size={24} onClick={handleShow} />
               <p style={{ color: "var(--orange)" }}>
                 {errors.user_password?.message}
               </p>
             </div>
             <div>
               <input
-                type="password"
+                type={type2}
                 name="user_c_password"
                 placeholder="Confirm Password"
                 {...register("user_c_password")}
               />
+              <Icon icon={iconType2} size={24} onClick={handleShow2} />
               <p style={{ color: "var(--orange)" }}>
                 {errors.user_c_password?.message}
               </p>
